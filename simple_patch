@@ -1,0 +1,11 @@
+--- ./lib/tasks/puppet.rake_ORIG	2019-05-29 16:17:43.599479613 +0300
++++ ./lib/tasks/puppet.rake	2019-05-29 16:18:48.311477725 +0300
+@@ -62,7 +62,7 @@
+           exit 1
+         end
+ 
+-        if changes["new"].empty? && changes["obsolete"].empty?
++        if changes["new"].empty? && changes["obsolete"].empty? && changes["updated"].empty?
+           puts "No changes detected" unless args.batch
+         else
+           unless args.batch
